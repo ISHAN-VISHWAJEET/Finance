@@ -1,0 +1,128 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y:scroll;
+}
+a{
+  text-decoration: none;  
+  color: whitesmoke;
+}
+ul{
+    list-style: none;
+}
+
+.navbar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    padding: 20px;
+    color: whitesmoke;
+    font-family: "Ubuntu";
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.nav-list li{
+    margin: 0 30px ;
+}
+
+.navbar a:visited{
+    font-weight: Bold;
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("Screenshot 2025-11-03 195832.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items:flex-end ;
+    justify-content: center;
+    font-family: "Ubuntu";
+}
+
+.header-container{
+    margin-bottom: 150px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+.header-container h2{
+    font-size: 4vmin;
+}
+
+.line{
+    width: 150px;
+    height: 4px;
+    background-color: red;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+.header-container h1{
+    font-size: 7vmin;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.ctn{
+    padding: 8px 15px;
+    background-color: red;
+    border-radius: 30px;
+    color: whitesmoke;
+}
+
+.circles{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    padding: 80px 160px 0 160px;
+}
+
+
+.block{
+    margin: 0 20px;
+
+}
+.block img{
+    width: 50%;
+    height: 50%;
+}
+
+.block h6{
+    margin: 2px 0 0 0;
+    font-size: 120%;
+    font-family: "Raleway";
+}
+
+.info{
+    align-items: center;
+    justify-items: center;
+    margin:100px;
+}
+
+.info h1{
+    font-family: "Ubuntu";
+    font-size: 400%;
+}
+#lines{
+    margin-bottom: 6px;
+}
+
+.para{
+    font-size: 200%;
+    font-family: "Raleway";
+}
