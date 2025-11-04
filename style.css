@@ -124,8 +124,8 @@ header{
 }
 
 .info{
-    align-items: left;
-    justify-items: left;
+    align-items: center;
+    justify-items: center;
     margin:100px;
 }
 
@@ -152,9 +152,3 @@ header{
     width: 75%;
 } 
 
-.robo{
-    height: 150%;
-    width: 150%;
-    position: absolute;
-    top: 640px;
-}
