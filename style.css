@@ -10,6 +10,20 @@ body{
     overflow-x: hidden;
     overflow-y:scroll;
 }
+
+.threeD{
+    position:absolute;
+    top: 0px;
+    z-index: -1;
+}
+
+/* #bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+} */
+
 a{
   text-decoration: none;  
   color: whitesmoke;
@@ -46,18 +60,19 @@ ul{
 header{
     width: 100vw;
     height: 100vh;
-    background-image: url("Screenshot 2025-11-03 195832.jpg");
+    /* background-image: url("Screenshot 2025-11-03 195832.jpg");
     background-position: bottom;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     display: flex;
     align-items:flex-end ;
     justify-content: center;
     font-family: "Ubuntu";
+    /* z-index: 2; */
 }
 
 .header-container{
-    margin-bottom: 150px;
+    margin-bottom: 25px;
     color: whitesmoke;
     text-align: center;
 }
@@ -109,8 +124,8 @@ header{
 }
 
 .info{
-    align-items: center;
-    justify-items: center;
+    align-items: left;
+    justify-items: left;
     margin:100px;
 }
 
@@ -118,6 +133,11 @@ header{
     font-family: "Ubuntu";
     font-size: 400%;
 }
+.info p{
+    text-align: left;
+    left: -10px;
+}
+
 #lines{
     margin-bottom: 6px;
 }
@@ -125,4 +145,16 @@ header{
 .para{
     font-size: 200%;
     font-family: "Raleway";
+}
+
+.introduction{
+    display: flex;
+    width: 75%;
+} 
+
+.robo{
+    height: 150%;
+    width: 150%;
+    position: absolute;
+    top: 640px;
 }
