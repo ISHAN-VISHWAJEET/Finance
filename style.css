@@ -4,11 +4,23 @@
     scroll-behavior: smooth;
 }
 body{
-    background-color: #f8f9fa;
+    background-color: #000;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     overflow-y:scroll;
+    color: white;
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
 }
 
 .threeD{
@@ -152,3 +164,69 @@ header{
     width: 75%;
 } 
 
+.card{
+    width: 30%;
+    height: 220px;
+    background-color: whitesmoke;
+    padding: 30px 40px 40px 40px;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    color: black;
+    font-family: "Ubuntu";
+    box-shadow: rgb(201, 188, 188) -10px 10px 20px 0px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+.card h2{
+    /* z-index: 1; */
+    /* color: white; */
+    font-size: 2em;
+    /* padding-bottom: 30px; */
+
+}
+
+.card h3{
+    padding-bottom: 20px;
+}
+
+#card{
+    position:relative;
+    top: -50px;
+    left: 70px;
+}
+
+#card2{
+    position: relative;
+    top: 10px;
+    left: 800px;
+}
+
+#card3{
+    position:relative;
+    top: 30px;
+    left: 200px;
+}
+
+#card4{
+    position: relative;
+    top: 60px;
+    left: 800px;
+}
+.svg-container{
+    position: absolute;
+    top: 1600px;
+    left: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 70%; */
+    /* height: 1178px; */
+}
+
+/* svg{
+    height: 100%;
+} */
