@@ -6,7 +6,7 @@ path.style.strokeDasharray = pathlength + ' ' + pathlength;
 path.style.strokeDashoffset = pathlength;
 
 window.addEventListener('scroll',() => {
-    var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop)/(document.documentElement.scrollHeight - document.documentElement.clientHeight);
+    var scrollPercentage = (document.documentElement.scrollTop/2 + document.body.scrollTop)/(document.documentElement.scrollHeight - document.documentElement.clientHeight);
 
     var drawLength = pathlength * scrollPercentage;
 
