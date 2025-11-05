@@ -218,7 +218,7 @@ header{
 }
 .svg-container{
     position: absolute;
-    top: 1600px;
+    top: 800px;
     left: 140px;
     display: flex;
     align-items: center;
@@ -230,3 +230,6 @@ header{
 /* svg{
     height: 100%;
 } */
+path {
+  transition: stroke-dashoffset 0.2s ease-out;
+}
