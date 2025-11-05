@@ -14,13 +14,26 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+        <a href="#navigationbar" class="btn">Back to the top</a>
     <spline-viewer url="https://prod.spline.design/Goe7fZoPTQrVOY8G/scene.splinecode" class="threeD"></spline-viewer>    
-    <nav class="navbar">
+    <nav class="navbar" id="navigationbar">
         <h1 class="logo">FINANCE</h1>
         <ul class="nav-list">   
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="">Resources</a></li>
-            <li><a href="">About Us</a></li>
+            <li class="nav-links">
+                <a href="index.html">Home</a>
+            </li>
+            <li class="nav-links">
+                <a href="">Resources</a>
+                <ul class="drop-down">
+                    <li>INTRODUCTION</li>
+                    <li>ESSENTIALS</li>
+                    <li>FINANCIAL INCLUSION</li>
+                    <li>OUR COMMITMENT</li>
+                </ul>
+            </li>
+            <li class="nav-links">
+                <a href="#header">About Us</a>
+            </li>
         </ul>
     </nav>
     <header>
@@ -30,7 +43,7 @@
                 <p>______________________</p>
             </div>
             <h1>An Important Part of Life</h1>
-            <a href="#circle" class="ctn" id="info">Learn More</a>
+            <a href="#circle" class="ctn" id="info">Start Learning Free</a>
         </div>
     </header>
     <div class="circles" id="circle">
@@ -67,40 +80,127 @@
             </p>
         </div>
     </div>
-    <div class="svg-container">
-        <svg width="1206" height="1286" viewBox="0 0 1206 1286" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-container">
-            <path d="M327.831 4.30243C386.379 70.6058 386.379 164.499 327.831 230.802C261.527 305.888 150.995 170.078 71.3308 230.802C-33.1802 310.467 5.04288 453.835 71.3308 567.302C184.798 761.529 547.715 365.62 647.331 567.302C696.533 666.918 706.003 757.453 647.331 851.802C552.982 1003.52 278.874 696.908 189.831 851.802C138.643 940.846 137.704 1026.31 189.831 1114.8C278.328 1265.05 582.642 948.905 636.331 1114.8C653.706 1168.49 597.331 1214.3 636.331 1259.3C675.331 1304.3 1205.33 1259.3 1205.33 1259.3" stroke="#C82D2D" stroke-width="13"/>
-        </svg>
+    <div class="box-container">
+        <div class="display">
+            <div class="box">
+                <h3>Financial Security</h3>
+                <p>Financial literacy empowers you to make informed decisions about savings in PPF/EPF, investing in mutual funds, and protecting assets through insurance. Understanding money management in the Indian context reduces stress and builds a safety net for life's uncertainties</p>
+            </div>
+            <div class="box">
+                <h3>Wealth Building</h3>
+                <p>Knowledge of compound interest through SIPs, tax-saving instruments under Section 80C, and smart investment in Indian markets enables wealth accumulation. Understanding schemes like NPS, Sukanya Samriddhi, and ELSS creates long-term prosperity.</p>
+            </div>
+        </div>
+        <div class="display">
+            <div class="box">
+                <h3>Financial Inclusion</h3>
+                <p>Jan Dhan Yojana has opened 48+ crore bank accounts, but true inclusion means understanding banking, insurance, pensions, and digital payments. Breaking barriers ensures every Indian, from rural to urban areas, can access and utilize financial services effectively.</p>
+            </div>
+            <div class="box">
+                <h3>Generational Impact</h3>
+                <p>Financial literacy creates lasting change in Indian families. Understanding money management, government schemes, and investment options helps break poverty cycles. Teaching children about savings, responsible spending, and long-term planning builds generational wealth.</p>
+            </div>
+        </div>
     </div>
-    <div class="card" id="card">
-        <h2>BUDGETING</h2>
-        <h3>_________</h3>
-        <p>1. It's a financial blueprint that helps track income, expenses, savings, and investments.</p>
-        <p>2. 50:30:20 rule (50% needs, 30% wants, 20% savings/investment).</p>
-        <p>3. Governments use budgets to plan public expenditure, infrastructure, education, and healthcare funding.</p>
+    <div class="box-container" style="background-color: #001; padding: 5px 0px;">
+        <div class="header">
+            <h1 class="typewriter" style="margin-right: 10px;color: red" >Essential</h1>
+            <h1>Financial Topics</h1>
+        </div>
+        <p style="font-size: 150%; font-family: 'Ubuntu';">Master the core pillars of financial literacy with our comprehensive curriculum</p>
+        <div class="display">
+            <div class="box">
+                <h3>Budgeting Basics</h3>
+                <p>Master the 50/30/20 rule adapted for Indian households, zero-based budgeting, and envelope methods. Learn to track expenses using UPI statements, identify spending patterns, and create a realistic budget that adapts to your income. Discover Indian budgeting apps like Walnut, ET Money, and Money View.</p>
+            </div>
+            <div class="box">
+                <h3>Smart Saving</h3>
+                <p>Build an emergency fund covering 6-12 months of expenses in high-interest savings accounts. Learn about Recurring Deposits (RD), Fixed Deposits (FD), Post Office Savings Schemes, and Sukanya Samriddhi Yojana. Understand automatic savings through SIPs and sweep-in accounts in Indian banks like SBI, HDFC, and ICICI.</p>
+            </div>
+            <div class="box">
+                <h3>Investing</h3>
+                <p>Understand NSE/BSE stocks, government bonds, mutual funds (equity, debt, hybrid), and ELSS. Learn about SIP (Systematic Investment Plan), asset allocation, and the power of rupee-cost averaging. Explore tax-saving investments under Section 80C including PPF, EPF, and NPS.</p>
+            </div>
+        </div>
+        <div class="display">
+            <div class="box">
+                <h3>Credit Management</h3>
+                <p>Understand CIBIL score (300-900 range), credit utilization ratio, and payment history impact. Learn strategies to improve credit scores with CIBIL, Experian India, and Equifax. Use credit cards wisely, manage EMIs, and understand the difference between secured and unsecured loans from Indian banks.</p>
+            </div>
+            <div class="box">
+                <h3>Home Ownership</h3>
+                <p>Navigate the Indian home buying process including RERA compliance, property registration, and stamp duty. Understand home loan options from banks and HFCs (Housing Finance Companies), interest rates, and tax benefits under Section 24(b) and 80EE. Learn about PMAY (Pradhan Mantri Awas Yojana) subsidies.</p>
+            </div>
+            <div class="box">
+                <h3>Financial Planning</h3>
+                <p>Create a comprehensive plan covering retirement (EPF, PPF, NPS), education savings for children, insurance needs (term, health, ULIP), and will/nomination basics. Learn about tax-saving strategies under Sections 80C, 80D, 80CCD(1B), and understand new vs old tax regime implications.</p>
+            </div>
+        </div>
     </div>
-    <div class="card" id="card2">
-        <h2>INVESTING</h2>
-        <h3>_________</h3>
-        <p>1. Return is what you earn from an investment. 
-            Risk is the chance that you might lose your money.
-            Higher return usually means higher risk that's the risk-return trade-off.</p>
-        <p>2. Spread your investments across different asset classes, reduce risks.</p>
-        <p>3. Short-term investors (1-3 years) usually prefer low-risk options like fixed deposits or debt funds.
-            Long-term investors (5+ years) can go for higher-risk assets like equities, since they have time to</p>
-        <p>4. The real magic of investing is compounding — earning interest on your previous interest.</p>
+    <div class="data">
+        <div class="header">
+            <h1>Financial</h1>
+            <h1 class="typewriter" style="margin: 0 10px;color: red; font-family: 'Ubuntu';" >Inclusion</h1>
+            <h1>For all</h1>
+        </div>
+        <p>Breaking down barriers and creating equal opportunities for everyone to access financial education and services, regardless of background, location, or circumstance.</p>
+        <div class="display">
+            <div class="box">
+                <h1 style="font-family: 'Ubuntu';">19 Cr</h1>
+                <h4 style="font-family: 'Raleway';">Unbanked Indians</h4>
+                <p>Still lack access to formal banking services despite Jan Dhan</p>
+            </div>
+            <div class="box">
+                <h1 style="font-family: 'Ubuntu';">27%</h1>
+                <h4 style="font-family: 'Raleway';">Financial Literacy</h4>
+                <p>Only 27% of Indian adults are financially literate</p>
+            </div>
+            <div class="box">
+                <h1 style="font-family: 'Ubuntu';">48 Cr +</h1>
+                <h4 style="font-family: 'Raleway';">Jan Dhan Accounts</h4>
+                <p>Opened but many remain inactive or underutilized</p>
+            </div>
+        </div>
     </div>
-    <div class="card" id="card3">
-        <h2>BANKING</h2>
-        <h3>_________</h3>
-        <p>1. It's a financial blueprint that helps track income, expenses, savings, and investments</p>
-        <p>2. 50:30:20 rule (50% needs, 30% wants, 20% savings/investment)</p>
+    <div class="commitment">
+        <div class="header">
+            <h2>Our </h2>
+            <h2 style="color: red; margin-left: 10px;">Goal</h2>
+        </div>
+        <div class="display">
+            <div class="box">
+               <h3>Pan-India Access</h3>
+               <p>Financial education will be accessible across all 28 states and 8 union territories. Will be available in Hindi, English, Tamil, Telugu, Bengali, Marathi, Gujarati, Kannada, Malayalam, and more regional languages, ensuring no Indian is left behind.</p> 
+            </div>
+            <div class="box">
+                <h3>Inclusive Design for Bharat</h3>
+                <p>Built for all Indians - from metro cities to rural villages. Supports low-bandwidth connections, works on basic smartphones, and respects diverse literacy levels with visual aids and voice-based learning options.</p>
+            </div>
+            <div class="box">
+                <h3>Culturally Relevant Content</h3>
+                <p>Content addressing unique Indian contexts - joint family finances, agricultural income management, festival savings, women's financial independence, and navigating government schemes like PMJDY, PMJJBY, and APY</p>
+            </div>
+        </div>
     </div>
-    <div class="card" id="card4">
-        <h2>INSURANCE</h2>
-        <h3>_________</h3>
-        <p>1. It's a financial blueprint that helps track income, expenses, savings, and investments</p>
-        <p>2. 50:30:20 rule (50% needs, 30% wants, 20% savings/investment)</p>
+    <div id="header">
+        <h3>About</h3>
+        <h3 style="color: red;margin-left: 10px;">us</h3>    
+    </div>
+    <div class="us">
+        <div class="ishan">
+            <img src="p15.jpg" alt="Ishan Vishwajeet">
+            <div class="box">
+                <h1>Ishan </h1>
+                <h6 style="font-family: 'Raleway';">Hi there, I am Ishan Vishwajeet, Owner and Developer of this website. Hope you are enjoying and learning.</h6>
+            </div>
+        </div>
+        <div class="neeraj">
+            <img src="p15.jpg" alt="Neeraj Yadav">
+            <div class="box">
+                <h1>Neeraj Yadav</h1>
+                <h6 style="font-family: 'Raleway';">Hi there, I am Neeraj, Co-Owner and Developer of this website. Hope you are enjoying and learning.</h6>
+            </div>
+        </div>
     </div>
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.93/build/spline-viewer.js"></script>
     <script src="script.js"></script>

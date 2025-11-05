@@ -164,72 +164,208 @@ header{
     width: 75%;
 } 
 
-.card{
-    width: 30%;
-    height: 220px;
-    background-color: whitesmoke;
-    padding: 30px 40px 40px 40px;
-    justify-items: center;
+.box-container{
     align-items: center;
-    overflow: hidden;
-    border-radius: 20px;
-    color: black;
+    justify-items: center;
+    width: 100vw;
+}
+
+.display{
+    display: flex;
+    margin: 40px;
+    /* padding: 0px; */
+}
+
+.box{
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 500px;
+    width: 90%;
+    color: white;
+    font-size: 1.5rem;
+    text-align: left;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.box:hover {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.7), 
+              0 0 50px rgba(0, 150, 255, 0.2);
+  transform: scale(1.03); /* slight zoom for depth */
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.box h3{
+    margin-bottom: 20px;
     font-family: "Ubuntu";
-    box-shadow: rgb(201, 188, 188) -10px 10px 20px 0px;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0 cover 40%;
 }
 
-.card h2{
-    /* z-index: 1; */
-    /* color: white; */
-    font-size: 2em;
-    /* padding-bottom: 30px; */
-
+.box p{
+    font-family: "Raleway";
 }
 
-.card h3{
-    padding-bottom: 20px;
+.header{
+    display: flex;
+    font-size: 200%;
+    font-family: "Raleway";
 }
 
-#card{
-    position:relative;
-    top: -50px;
-    left: 70px;
+.typewriter h1{
+    margin-inline: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid;
+    animation: typing 3s steps(22) forwards;
 }
 
-#card2{
-    position: relative;
-    top: 10px;
-    left: 800px;
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes blink{
+    50%{
+        border-color: transparent;
+    }
 }
 
-#card3{
-    position:relative;
-    top: 30px;
-    left: 200px;
+.data{
+    align-items: center;
+    justify-items: center;
 }
 
-#card4{
-    position: relative;
-    top: 60px;
-    left: 800px;
+.box{
+    align-items: center;
+    justify-items: center;
+    text-align: center;
 }
-.svg-container{
-    position: absolute;
-    top: 800px;
-    left: 140px;
+
+.commitment{
+    align-items: center;
+    justify-items: center;
+    background-color: #010;
+    padding: 5px 0;
+}
+
+.drop-down li{
+    list-style: none;
+    height: 100%;
+    padding: 0.5rem 0rem;
+    font-weight:600 ;
+    cursor: pointer;
+    margin: 0.5rem - 0.5rem;
+    background-color: antiquewhite;
+    color: #000;
+    box-shadow:0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    font-size: 12px;
+    display: none;
+}
+
+.nav-list li:hover .drop-down{
+    display: visible;
+}
+
+.us{
+    display: flex;
+    padding-bottom: 60px;
+}
+
+.ishan{
     display: flex;
     align-items: center;
-    justify-content: center;
-    /* width: 70%; */
-    /* height: 1178px; */
+    justify-items: center;
 }
 
-/* svg{
-    height: 100%;
-} */
-path {
-  transition: stroke-dashoffset 0.2s ease-out;
+.us img{
+    border-radius: 100px;
+    border-radius: 50%;
+    width: 25%;
+    margin: 20px -30px 20px 20px;
+    border: 10px solid #f0dd31 ;
+    z-index: 2;
 }
+.us h1{
+    font-family: "Ubuntu";
+    margin-bottom: 10px;
+}
+
+
+.neeraj{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.infoa{
+    background-color: red;
+    max-width: 340px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: red;
+    border-width: 10px 45px ;
+    
+}
+
+#header{
+    font-family: "Ubuntu";
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 350%;
+}
+
+.us, #header{
+    background-color: #ebe3562a;
+}
+
+.btn{
+    background: black;
+    color: white;
+    font-family: "Raleway";
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.535);
+    position:fixed;
+    right: 20px;
+    top: 90%;
+    z-index: 3;
+    animation-name: appear;
+    animation-timeline: scroll(y);
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.7), 
+              0 0 50px rgba(0, 150, 255, 0.2);
+    transform: scale(1.03); 
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    3%{
+        opacity: 0;
+    }
+    3.5%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
