@@ -4,12 +4,17 @@
     scroll-behavior: smooth;
 }
 body{
-    background-color: #000;
+    background-color: #071027;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     overflow-y:scroll;
     color: white;
+}
+
+.bg{
+    width: 100vw;
+    height: 100vh;
 }
 
 @keyframes appear{
@@ -49,11 +54,12 @@ ul{
     top: 0;
     left: 0;
     display: flex;
-    width: 95%;
+    width: 98%;
     justify-content: space-between;
     padding: 20px;
     color: whitesmoke;
     font-family: "Ubuntu";
+    font-size: 200%;
 }
 .nav-list{
     display: flex;
@@ -62,7 +68,7 @@ ul{
 }
 
 .nav-list li{
-    margin: 0 30px ;
+    margin: 0 40px ;
 }
 
 .navbar a:visited{
@@ -113,15 +119,18 @@ header{
 }
 
 .circles{
+    width: 100vw;
     display: flex;
     justify-content: center ;
     align-items: center;
-    padding: 80px 160px 0 160px;
+    padding: 80px 160px 0 120px;
 }
 
 
 .block{
     margin: 0 20px;
+    /* align-items: center; */
+    /* justify-items: center; */
 
 }
 .block img{
@@ -130,9 +139,11 @@ header{
 }
 
 .block h6{
-    margin: 2px 0 0 0;
-    font-size: 120%;
+    margin: 18px 0 0 0;
+    font-size: 200%;
     font-family: "Raleway";
+    /* align-items: center;
+    justify-items: center; */
 }
 
 .info{
@@ -336,7 +347,7 @@ header{
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    padding: 10px 20px;
+    padding: 20px 30px;
     border: 1px solid rgba(255, 255, 255, 0.535);
     position:fixed;
     right: 20px;
@@ -368,4 +379,159 @@ header{
         opacity: 1;
     }
 }
+
+.budget-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 10%;
+      gap: 280px;
+      flex-wrap: wrap;
+    }
+
+.budget-text {
+    flex: 1;
+    max-width: 600px;
+    opacity: 0;
+    font-family: 'Raleway';
+    transform: translateX(-100px);
+    transition: all 1s ease;
+}
+
+.budget-text.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.budget-text h1 {
+    font-size: 3.0rem;
+    color: #00ff99;
+    margin-bottom: 20px;
+}
+
+.budget-text h2{
+    font-size: 2.5rem;
+}
+
+.budget-text p {
+    font-size: 1.6rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #cccccc;
+}
+
+.budget-text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.budget-text li {
+    margin: 10px 0 15px 0;
+    font-size: 1.3rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 15px 20px 15px;
+    border-left: 3px solid #00ff99;
+    border-radius: 6px;
+}
+
+.budget-image {
+    flex: 1;
+    text-align: center;
+}
+
+.budget-image img {
+    /* max-width: 100%; */
+    width: 40vw;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 153, 0.2);
+}
+
+@media (max-width: 900px) {
+    .budget-section {
+    flex-direction: column;
+    text-align: center;
+    }
+    .budget-text {
+    transform: none;
+    }
+}
+
+
+.monetary-section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 10%;
+      gap: 300px;
+      flex-wrap: wrap;
+    }
+
+    .monetary-text {
+      flex: 1;
+      max-width: 600px;
+      font-family: 'Raleway';
+      opacity: 0;
+      transform: translateX(100px);
+      transition: all 1s ease;
+    }
+
+    .monetary-text.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .monetary-text h1 {
+      font-size: 3.0rem;
+      color: #00bfff;
+      margin-bottom: 20px;
+    }
+
+    .monetary-text h2{
+        font-size: 2.5rem;
+    }
+
+    .monetary-text p {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #cccccc;
+    }
+
+    .monetary-text ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .monetary-text li {
+      margin: 10px 0;
+      font-size: 1.1rem;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 10px 15px;
+      border-left: 3px solid #00bfff;
+      border-radius: 6px;
+    }
+
+    .monetary-image {
+      flex: 1;
+      text-align: center;
+    }
+
+    .monetary-image img {
+      /* max-width: 100%; */
+      width: 37vw;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0, 191, 255, 0.3);
+    }
+
+    @media (max-width: 900px) {
+      .monetary-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      .monetary-text {
+        transform: none;
+      }
+    }
 

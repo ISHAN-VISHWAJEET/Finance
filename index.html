@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FINLIT</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,10 +14,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <a href="#navigationbar" class="btn">Back to the top</a>
-    <spline-viewer url="https://prod.spline.design/Goe7fZoPTQrVOY8G/scene.splinecode" class="threeD"></spline-viewer>    
+    <div class="bg">
+        <spline-viewer url="https://prod.spline.design/l-0a1gwMlPJLZAA5/scene.splinecode" class="threeD"></spline-viewer>
+    </div>
+    <a href="#navigationbar" class="btn">Back to the top</a>    
     <nav class="navbar" id="navigationbar">
-        <h1 class="logo">FINANCE</h1>
+        <img src="generated-image.png" class="logo" alt="" style="width: 10%;height: 10%;">
+        <!-- <h1 class="logo">FINLIT</h1> -->
         <ul class="nav-list">   
             <li class="nav-links">
                 <a href="index.html">Home</a>
@@ -36,16 +39,6 @@
             </li>
         </ul>
     </nav>
-    <header>
-        <div class="header-container">
-            <h2>Explore The Finance Sector</h2>
-            <div class="lines">
-                <p>______________________</p>
-            </div>
-            <h1>An Important Part of Life</h1>
-            <a href="#circle" class="ctn" id="info">Start Learning Free</a>
-        </div>
-    </header>
     <div class="circles" id="circle">
         <div class="block">
              <img src="money.png" alt="" srcset="">
@@ -71,16 +64,72 @@
         </div>
         <div class="introduction">
             <p class="para">
-                Nowadays, everyone is running after money — adults are busy doing jobs or building businesses, and 
-                students are studying hard so they can earn in the future. But while everyone focuses on earning money, 
-                very few actually know how to manage it. Becoming financially literate on your own is possible, but it's a 
-                slow and confusing process. Many young people have no idea how to handle the money they'll earn later in life.
-                That's where our web app comes in — it's designed to help you understand how to manage and invest your money wisely, 
-                learn about the banking system, and get a clear idea of how taxes work, all in one simple and engaging platform.
+                Everyone's chasing money — adults earn it, students prepare for it — but few know how to manage it. Our web app makes financial learning simple, helping you master money management, investing, banking, and taxes in one platform.
             </p>
         </div>
     </div>
-    <div class="box-container">
+    <section class="budget-section">
+        <div class="budget-text">
+            <h1>Budgeting</h1>
+            <p>Budgeting means tracking your income and expenses so you can spend smartly and save wisely. It’s about how you divide your income based on your needs and wants. Here we help you understand how to divide your income effectively.</p>
+
+            <h2>Advantages</h2>
+            <ul>
+                <li>Prevents overspending: You know where your money goes.</li>
+                <li>Helps plan savings for emergencies or goals.</li>
+                <li>Keeps you in control of your finances.</li>
+                <li>Guides how much to invest each month.</li>
+            </ul>
+
+            <h2>How can you...</h2>
+            <ul>
+                <li><b>50/30/20 Rule:</b> 50% needs, 30% wants, 20% savings/investments.</li>
+                <li>Every rupee you earn is assigned a purpose — nothing goes unplanned.</li>
+                <li>Keep cash for different categories in separate envelopes to control spending.</li>
+            </ul>
+        </div>
+
+        <div class="budget-image">
+            <img src="pexels-photo-6901511.jpeg" alt="Indian currency notes">
+        </div>
+  </section>
+  <section class="monetary-section">
+    <div class="monetary-image">
+      <img src="65a98b1e20ff24e6ca12821554c80f0b.jpg" alt="Indian Monetary Growth Graph">
+    </div>
+
+    <div class="monetary-text">
+      <h1>Monetary System</h1>
+      <p>
+        The monetary system of a country refers to the framework through which money is created, managed, 
+        and circulated in the economy. 
+      </p>
+      <p>
+        <b>Monetary System in India:</b> India follows a managed paper currency system, also called a fiat money system — 
+        which means our currency, the Indian Rupee (₹), is not backed by gold or silver, but by the trust in the 
+        Government of India and the Reserve Bank of India (RBI).
+      </p>
+
+      <ul>
+        <li>The official currency is the Indian Rupee (₹), issued and controlled by the RBI. One Rupee = 100 Paise.</li>
+        <li>The RBI, established in 1935 under the RBI Act of 1934, manages money supply, prints currency, controls inflation, and maintains economic stability.</li>
+        <li>All notes except the ₹1 note and coins are issued by the RBI; ₹1 note and coins are issued by the Government of India.</li>
+        <li>The RBI regulates money flow through tools like repo rate, reverse repo rate, CRR, and SLR.</li>
+        <li>India's digital payment systems — UPI, NEFT, RTGS, and IMPS — ensure fast, secure transactions.</li>
+      </ul>
+
+      <!-- <h2>Role of the Monetary System</h2>
+      <ul>
+        <li>Maintains price stability and controls inflation.</li>
+        <li>Ensures sustainable economic growth.</li>
+        <li>Facilitates trade and investment.</li>
+        <li>Builds trust and efficiency in financial transactions.</li>
+      </ul> -->
+    </div>
+  </section>
+  
+
+    <!-- <div class="box-container">
         <div class="display">
             <div class="box">
                 <h3>Financial Security</h3>
@@ -201,8 +250,8 @@
                 <h6 style="font-family: 'Raleway';">Hi there, I am Neeraj, Co-Owner and Developer of this website. Hope you are enjoying and learning.</h6>
             </div>
         </div>
-    </div>
-    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.93/build/spline-viewer.js"></script>
+    </div> -->
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.96/build/spline-viewer.js"></script>
     <script src="script.js"></script>
 
 
