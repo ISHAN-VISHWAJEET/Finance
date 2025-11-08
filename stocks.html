@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Explore India's Stock Market</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b0c10;
+    color: #c5c6c7;
+    overflow-x: hidden;
+  }
+  :root {
+        --color-primary: #00aaff;
+        --color-black: rgba(0, 0, 0, 0.7);
+        --color-white: #ffffff;
+      }
+
+      body {
+        margin: 0;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+      }
+
+      /* === Background 3D Scene === */
+      spline-viewer {
+        width: 100%;
+        height: 100%;
+  
+        pointer-events: none; /* disables zoom, pan, click */
+      }
+
+      /* === Menu Bar === */
+      .menu-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background-color: var(--color-black);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5%;
+        z-index: 10;
+        animation: slideDown 1s ease-out;
+        backdrop-filter: blur(10px);
+      }
+
+      .logo {
+        padding-left: 4%
+      }
+
+      .logo span {
+        color: var(--color-primary);
+      }
+
+      .menu-bar ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu-bar ul li {
+        padding: 10px 30px;
+        position: relative;
+      }
+
+      .menu-bar ul li a {
+        font-size: 18px;
+        color: var(--color-white);
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      .menu-bar ul li a:hover {
+        color: var(--color-primary);
+      }
+
+      /* === Dropdown Menu === */
+      .dropdown-menu {
+        display: none;
+      }
+
+      .menu-bar ul li:hover .dropdown-menu {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background-color: var(--color-black);
+      }
+
+      .menu-bar ul li:hover .dropdown-menu ul {
+        display: block;
+        margin: 10px;
+      }
+
+      .menu-bar ul li:hover .dropdown-menu ul li {
+        width: 150px;
+        padding: 10px;
+      }
+
+      .dropdown-menu-1 {
+        display: none;
+      }
+
+      .dropdown-menu ul li:hover .dropdown-menu-1 {
+        display: block;
+        position: absolute;
+        left: 150px;
+        top: 0;
+        background-color: var(--color-black);
+      }
+
+      /* === Hero Section Placeholder === */
+      .hero {
+        height: 100vh;
+        z-index: 1;
+      }
+
+      /* === Animation === */
+      @keyframes slideDown {
+        0% {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+    
+  nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+  nav ul li a {
+    color: #c5c6c7;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  nav ul li a:hover {
+    color: #66fcf1;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    background: #1f2833;
+  }
+  .hero-text {
+    flex: 1;
+    min-width: 300px;
+    animation: slideIn 0.1s infinite;
+  }
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .hero-text h2 {
+    color: #66fcf1;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+  .hero-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  .hero img {
+    flex: 1;
+    max-width: 400px;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  section {
+    padding: 60px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  h3 {
+    color: #45a29e;
+    font-size: 1.6rem;
+    border-left: 4px solid #66fcf1;
+    padding-left: 10px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+  }
+  .card {
+    background: #1f2833;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(102, 252, 241, 0.2);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  th, td {
+    border: 1px solid #45a29e;
+    padding: 10px;
+    text-align: left;
+  }
+  th { background: #0b0c10; }
+  .logo-slider {
+      background-color: bisque;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    background: #0b0c10;
+    padding: 30px 0;
+    border-top: 2px solid #1f2833;
+    border-bottom: 2px solid #1f2833;
+  }
+  .logo-slider img {
+    height: 60px;
+    margin: 0 40px;
+  }
+  @keyframes scrollLogos {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+  }
+  footer {
+    text-align: center;
+    padding: 40px;
+    background: #1f2833;
+    color: #66fcf1;
+  }
+  .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+  .image-gallery img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  .image-gallery img:hover {
+    transform: scale(1.05);
+  }
+   
+
+
+* {
+  margin: 0;
+}
+
+.wrapper {
+    backface-visibility: visible;
+    background: white;
+  width: 90%;
+  max-width: 1536px;
+  margin-inline: auto;
+  position: relative;
+  height: 100px;
+  margin-top: 5rem;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+}
+
+@keyframes scrollLeft {
+  to {
+    left: -200px;
+  }
+}
+
+.item {
+  width: 200px;
+  height: 100px;
+  background-color: transparent;
+  border-radius: 6px;
+  position: absolute;
+  left: max(calc(200px * 8), 100%);
+  animation-name: scrollLeft;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.item1 {
+  animation-delay: calc(30s / 10 * (10 - 1) * -1);
+}
+
+.item2 {
+  animation-delay: calc(30s / 10 * (10 - 2) * -1);
+}
+
+.item3 {
+  animation-delay: calc(30s / 10 * (10 - 3) * -1);
+}
+
+.item4 {
+  animation-delay: calc(30s / 10 * (10 - 4) * -1);
+}
+
+.item5 {
+  animation-delay: calc(30s / 10 * (10 - 5) * -1);
+}
+
+.item6 {
+  animation-delay: calc(30s / 10 * (10 - 6) * -1);
+}
+
+.item7 {
+  animation-delay: calc(30s / 10 * (10 - 7) * -1);
+}
+
+.item8 {
+  animation-delay: calc(30s / 10 * (10 - 8) * -1);
+}
+.item9 {
+  animation-delay: calc(30s / 10 * (10 - 9) * -1);
+}
+.item10 {
+  animation-delay: calc(30s / 10 * (10 - 10) * -1);
+}
+
+</style>
+</head>
+<body>
+<div class="menu-bar">
+        <img src="generated-image.png" class="logo" alt="" style="width: 9%;height: 100%;">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <!-- <li><a href="#">About</a></li> -->
+        <li>
+          <a href="#">Resources ▾</a>
+          <div class="dropdown-menu">
+            <ul>
+              <li><a href="index.html#circle">Introduction</a></li>
+              <li><a href="index.html#budget">Budgeting</a></li>
+              <li>
+                <a href="index.html#monetary">Monetary</a>
+                <!-- <div class="dropdown-menu-1">
+                  <ul>
+                    <li><a href="#">Team-1</a></li>
+                    <li><a href="#">Team-2</a></li>
+                    <li><a href="#">Team-3</a></li>
+                    <li><a href="#">Team-4</a></li>
+                  </ul>
+                </div> -->
+              </li>
+              <!-- <li><a href="stocks.html">Stock Market</a></li> -->
+            </ul>
+          </div>
+        </li>
+        <!-- <li><a href="#">Blog</a></li> -->
+        <li><a href="index.html#about">About Us</a></li>
+      </ul>
+    </div>
+<div id="home" class="hero">
+  <div class="hero-text">
+    <h2>Explore India's Fast-Growing Stock Market</h2>
+    <p>Discover how India's equity markets function — from daily trading on the NSE and BSE to SEBI's role in ensuring transparency. Learn who participates, the instruments available like equities, ETFs, and IPOs, and how taxation shapes your returns. Understand key opportunities, market trends, and risks to make smarter, more confident investment decisions.</p>
+  </div>
+  <img src="https://images.pexels.com/photos/6802044/pexels-photo-6802044.jpeg" alt="Stock Market" />
+</div>
+    <div class="colorxhange">
+<div class="logo-slider">
+    <div class="wrapper">
+  <a href="#"> <div class="item item1"><img src="infosys-logo.png.original.png" alt="Infosys" style="width: 65%;height: 60%; align-items: baseline;" /></div></a>
+  <a href="#"><div class="item item2"><img src="tata-consultancy-logo-png_seeklogo-289633.png" alt="TCS" style="width: 90%;height: 150px; margin-bottom: auto" /></div></a>
+  <a href="#"><div class="item item3"><img src="Reliance-Industries-Limited-Logo.png" alt="Reliance" style="width: 77%;height: 100%;" /></div></a>
+  <a href="#"><div class="item item4"><img src="hdfc-bank-logo-png_seeklogo-556499.png" alt="HDFC" style="width: 50%;height: 150px; " /></div></a>
+  <a href="#"><div class="item item5"><img src="icici-bank-logo-png_seeklogo-556500.png" alt="ICICI" style="width: 60%;height: 100%;" /></div></a>
+  <a href="#"><div class="item item6"><img src="axis-bank-logo-png_seeklogo-556498.png" alt="Axis Bank" style="width: 60%;height: 100%;" /></div></a>
+  <a href="#"><div class="item item7"><img src="sbi-state-bank-of-india-logo-png_seeklogo-556507.png" alt="SBI" style="width: 60%;height: 100%;" /></div></a>
+  <a href="#"><div class="item item8"><img src="wipro-new-logo-png_seeklogo-360291.png" alt="Wipro"style="width: 60%;height: 100%;" /></div></a>
+  <a href="#"><div class="item item9"><img src="bajaj-finserve-logo-png_seeklogo-305856.png" alt="Bajaj Finserv" style="width: 60%;height: 150%;" /></div></a>
+  <a href="#"><div class="item item10"><img src="itc-limited-logo-png_seeklogo-74137.png" alt="ITC" style="width: 60%;height: 100%;" /></div></a>
+</div>
+    
+    
+</div></div>
+<section id="about">
+  <h3>Key Exchanges & Regulator</h3>
+  <div class="grid">
+    <div class="card"><h4>NSE (National Stock Exchange)</h4><p>Established in 1992, the NSE revolutionized trading with electronic systems, making it India’s largest exchange by volume.
+It introduced transparency, faster trade settlements, and real-time data access for investors across the country.</p></div>
+    <div class="card"><h4>BSE (Bombay Stock Exchange)</h4><p>Founded in 1875, BSE is Asia's oldest exchange and home to SENSEX — a benchmark of India’s top 30 companies. It has played a crucial role in shaping India's financial ecosystem by providing a transparent and efficient marketplace.</p></div>
+    <div class="card"><h4>SEBI (Regulator)</h4><p>Formed in 1992, SEBI safeguards investors, ensures fair market practices, and enforces transparency.
+It monitors brokers, mutual funds, and listed companies to prevent fraud and insider trading.
+Through constant reforms and digital initiatives, SEBI builds trust and promotes long-term market stability.</p></div>
+  </div>
+  <div class="image-gallery">
+    <img src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg" alt="Trading Floor" />
+    <img src="https://images.pexels.com/photos/210742/pexels-photo-210742.jpeg" alt="Stock Exchange Building" />
+  </div>
+</section>
+<section>
+  <h3>How the Market Works</h3>
+    <br>
+  <p style="font-size: 1.2rem;">The Indian stock market operates on the fundamental principle of demand and supply. When investors expect a company to perform well — whether due to strong earnings, innovation, or positive market sentiment — they buy its shares, driving the price upward. Conversely, when confidence drops, selling pressure causes prices to fall.
+Trading takes place in real time through brokers and secure online platforms, allowing millions of investors to buy and sell within seconds. Every transaction is closely monitored and regulated by SEBI (Securities and Exchange Board of India) to maintain fairness, prevent manipulation, and protect investor interests. The system ensures transparency, efficiency, and trust — the pillars that make India's equity market one of the fastest-growing in the world.</p>
+  <div class="image-gallery">
+    <img src="https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg" alt="Online Trading" />
+    <img src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg" alt="Stock Analysis" />
+  </div>
+</section>
+<section>
+  <h3>Market Participants</h3>
+  <div class="grid">
+    <div class="card"><h4>Retail Investors</h4><p>Individuals investing directly or via mutual funds.</p></div>
+    <div class="card"><h4>Institutional Investors</h4><p>Mutual funds, insurance companies, and pension funds that drive market liquidity.</p></div>
+    <div class="card"><h4>FIIs & DIIs</h4><p>Foreign and Domestic Institutional Investors influence large capital movements and market trends.</p></div>
+  </div>
+</section>
+<section>
+  <h3>Instruments & IPOs</h3>
+  <div class="grid">
+    <div class="card"><h4>Equity Shares</h4><p>Direct ownership in companies — offers dividends and capital gains potential.</p></div>
+    <div class="card"><h4>Mutual Funds & ETFs</h4><p>Professionally managed or index-tracking pooled investments that diversify risk.</p></div>
+    <div class="card"><h4>IPOs</h4><p>Buy shares when companies list publicly for the first time — often an entry point for new investors.</p></div>
+  </div>
+</section>
+<section>
+  <h3>Taxation Basics (India)</h3>
+  <table>
+    <tr><th>Type</th><th>Rule</th></tr>
+    <tr><td>Short-Term Capital Gains (STCG)</td><td>15% tax if sold within 1 year</td></tr>
+    <tr><td>Long-Term Capital Gains (LTCG)</td><td>10% on profits above ₹1,00,000 if held >1 year</td></tr>
+  </table>
+  <p style="margin-top:10px;">Always verify latest tax updates with SEBI or Income Tax authorities. Holding long-term, reinvesting dividends, and using tax-efficient funds can optimize your returns.</p>
+</section>
+<section>
+  <h3>Risks & Opportunities</h3>
+  <div class="grid">
+    <div class="card"><h4>Opportunities</h4><p>India's rapid economic growth, driven by its expanding middle class, digital transformation, and global investor confidence, has positioned it as one of the world’s most attractive markets. Strong performance in IT, banking, manufacturing, and renewable energy continues to fuel innovation and job creation.</p></div>
+    <div class="card"><h4>Risks</h4><p>Market volatility, changing interest rates, and government policy shifts can significantly impact stock performance. Sudden global events, inflation trends, or geopolitical tensions can also trigger short-term market swings. To navigate these uncertainties, diversification is essential — spreading investments across sectors, asset classes, and time horizons helps reduce risk and balance potential losses with gains.</p></div>
+  </div>
+  <div class="image-gallery">
+    <img src="https://images.pexels.com/photos/210607/pexels-photo-210607.jpeg" alt="Investor Planning" />
+    <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg" alt="Stock Graph" />
+  </div>
+</section>
+<section>
+  <h3>Practical Tips</h3>
+  <ul>
+    <li>Diversify your portfolio — don't put all your money into one stock or sector.</li>
+    <li>Have a long-term plan — focus on consistent growth, not short-term gains.</li>
+    <li>Keep emergency funds separate from investments.</li>
+    <li>Use stop-loss orders to limit trading risks.</li>
+    <li>Stay informed through financial news and SEBI updates.</li>
+  </ul>
+</section>
+<!-- <section id="contact">
+  <h3>Contact Us</h3>
+  <p>Have questions or feedback? Reach out to us at <strong>support@stockinsights.in</strong> or call <strong>+91 98765 43210</strong>.</p>
+</section> -->
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = 'slideIn 1s forwards';
+      }
+    });
+  });
+  document.querySelectorAll('.hero-text, .card').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

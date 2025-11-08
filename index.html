@@ -15,65 +15,75 @@
 </head>
 <body>
     <div class="bg">
-        <spline-viewer url="https://prod.spline.design/l-0a1gwMlPJLZAA5/scene.splinecode" class="threeD"></spline-viewer>
+        <spline-viewer url="https://prod.spline.design/l-0a1gwMlPJLZAA5/scene.splinecode" class="threeD" id="navigationbar"></spline-viewer>
     </div>
-    <a href="#navigationbar" class="btn">Back to the top</a>    
-    <nav class="navbar" id="navigationbar">
-        <img src="generated-image.png" class="logo" alt="" style="width: 10%;height: 10%;">
-        <!-- <h1 class="logo">FINLIT</h1> -->
-        <ul class="nav-list">   
-            <li class="nav-links">
-                <a href="index.html">Home</a>
-            </li>
-            <li class="nav-links">
-                <a href="">Resources</a>
-                <ul class="drop-down">
-                    <li>INTRODUCTION</li>
-                    <li>ESSENTIALS</li>
-                    <li>FINANCIAL INCLUSION</li>
-                    <li>OUR COMMITMENT</li>
-                </ul>
-            </li>
-            <li class="nav-links">
-                <a href="#header">About Us</a>
-            </li>
-        </ul>
-    </nav>
+    
+    <!-- <a href="#navigationbar" class="btn"><img src="475732.png" alt="">Back To The Top</a>     -->
+    <div class="menu-bar" >
+        <img src="generated-image.png" class="logo" alt="" style="width: 9%;height: 100%;">
+        <ul>
+        <li><a href="#" style="font-family: 'Raleway';">FAQs</a></li>
+        <!-- <li><a href="#" style="font-family: 'Raleway';">About</a></li> -->
+        <li>
+          <a href="#" style="font-family: 'Raleway';">Resources ▾</a>
+          <div class="dropdown-menu">
+            <ul>
+              <li><a href="#circle" style="font-family: 'Raleway';">Introduction</a></li>
+              <li><a href="#budget" style="font-family: 'Raleway';">Budgeting</a></li>
+              <li>
+                <a href="#monetary" style="font-family: 'Raleway';">Monetary</a>
+                <!-- <div class="dropdown-menu-1">
+                  <ul>
+                    <li><a href="#">Team-1</a></li>
+                    <li><a href="#">Team-2</a></li>
+                    <li><a href="#">Team-3</a></li>
+                    <li><a href="#">Team-4</a></li>
+                  </ul>
+                </div> -->
+              </li>
+              <li><a href="stocks.html" style="font-family: 'Raleway';">Stock Market</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="#about" style="font-family: 'Raleway';">About Us</a></li>
+      </ul>
+    </div>
     <div class="circles" id="circle">
         <div class="block">
              <img src="money.png" alt="" srcset="">
-             <h6>BUDGETING</h6>
+             <h6 style="font-family: 'Raleway'; text-decoration: none;">BUDGETING</h6>
         </div>
         <div class="block">
              <img src="bar-graph.png" alt="" srcset="">
-             <h6>INVESTING</h6>
+             <h6 style="font-family: 'Raleway'; text-decoration: none;">INVESTING</h6>
         </div>
         <div class="block">
              <img src="atm-card.png" alt="" srcset="">
-             <h6>CREDIT/DEBIT</h6>
+             <h6 style="font-family: 'Raleway'; text-decoration: none;">CREDIT/DEBIT</h6>
         </div>
         <div class="block">
              <img src="health-insurance.png" alt="" srcset="">
-             <h6>INSURANCE</h6>
+             <h6 style="font-family: 'Raleway'; text-decoration: none;">INSURANCE</h6>
         </div>
     </div>
     <div class="info">
-        <h1>INTRODUCTION</h1>
+        <h1 style="font-family: 'Raleway'; text-decoration: none;">INTRODUCTION</h1>
+        
         <div id="lines">
-            <p>______________________</p>
+            
         </div>
         <div class="introduction">
             <p class="para">
-                Everyone's chasing money — adults earn it, students prepare for it — but few know how to manage it. Our web app makes financial learning simple, helping you master money management, investing, banking, and taxes in one platform.
+                Learning about the finance sector provides a deep understanding of how money, investments, and financial systems drive the global economy. It equips individuals with the knowledge to make informed financial decisions, analyze markets, and manage risks effectively. Studying finance fosters critical thinking, analytical, and problem-solving skills essential for careers in banking, investment, and corporate finance. It also helps learners understand economic trends, financial instruments, and the impact of global events on markets. As technology reshapes financial services through innovations like fintech and digital banking, finance education becomes even more valuable for developing future-ready professionals who can navigate an evolving financial landscape.
             </p>
         </div>
     </div>
-    <section class="budget-section">
-        <div class="budget-text">
-            <h1>Budgeting</h1>
+    <section class="budget-section" >
+        <div class="budget-text" id="budget">
+            <h1 style="font-family: 'Raleway'; text-decoration: none;">Budgeting</h1>
             <p>Budgeting means tracking your income and expenses so you can spend smartly and save wisely. It’s about how you divide your income based on your needs and wants. Here we help you understand how to divide your income effectively.</p>
 
-            <h2>Advantages</h2>
+            <h2 style="font-family: 'Raleway'; text-decoration: none;">Advantages</h2>
             <ul>
                 <li>Prevents overspending: You know where your money goes.</li>
                 <li>Helps plan savings for emergencies or goals.</li>
@@ -81,7 +91,7 @@
                 <li>Guides how much to invest each month.</li>
             </ul>
 
-            <h2>How can you...</h2>
+            <h2 style="font-family: 'Raleway'; text-decoration: none;">How can you...</h2>
             <ul>
                 <li><b>50/30/20 Rule:</b> 50% needs, 30% wants, 20% savings/investments.</li>
                 <li>Every rupee you earn is assigned a purpose — nothing goes unplanned.</li>
@@ -98,8 +108,8 @@
       <img src="65a98b1e20ff24e6ca12821554c80f0b.jpg" alt="Indian Monetary Growth Graph">
     </div>
 
-    <div class="monetary-text">
-      <h1>Monetary System</h1>
+    <div class="monetary-text" id="monetary">
+      <h1 style="font-family: 'Raleway'; text-decoration: none;">Monetary System</h1>
       <p>
         The monetary system of a country refers to the framework through which money is created, managed, 
         and circulated in the economy. 
@@ -117,16 +127,66 @@
         <li>The RBI regulates money flow through tools like repo rate, reverse repo rate, CRR, and SLR.</li>
         <li>India's digital payment systems — UPI, NEFT, RTGS, and IMPS — ensure fast, secure transactions.</li>
       </ul>
-
-      <!-- <h2>Role of the Monetary System</h2>
-      <ul>
-        <li>Maintains price stability and controls inflation.</li>
-        <li>Ensures sustainable economic growth.</li>
-        <li>Facilitates trade and investment.</li>
-        <li>Builds trust and efficiency in financial transactions.</li>
-      </ul> -->
     </div>
-  </section>
+<section class="hero" id="about">
+  <h2>Meet the Minds Behind the Project</h2>
+  <p>We’re two passionate individuals dedicated to making finance simple, engaging, and accessible for everyone. Our goal is to help people understand the world of investments and build confidence in managing money wisely.</p>
+</section>
+
+<section class="team">
+  <div class="member">
+    <img src="p15.jpg" alt="Team Member 1">
+    <h3>Ishan Vishwajeet</h3>
+    <p>Hi, I am Owner and developer of this website.</p>
+  </div>
+  <div class="member">
+    <img src="Screenshot 2025-11-08 155508.png" alt="Team Member 2">
+    <h3>Neeraj Yadav</h3>
+    <p>Hi, I am Co-Owner and developer of this Website</p>
+  </div>
+</section>
+
+<section class="hero">
+  <h2>Frequently Asked Questions</h2>
+  <p>Find quick answers to common questions about our platform, investing basics, and how you can make the most of our tools.</p>
+</section>
+
+<section id="FAQ">
+  <div class="faq-item">
+    <div class="faq-question">What is the purpose of this platform?</div>
+    <div class="faq-answer">
+      Our platform aims to simplify financial learning and make concepts like investing, budgeting, and taxation accessible and engaging for everyone.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Is this suitable for beginners?</div>
+    <div class="faq-answer">
+      Absolutely! The content is designed with beginners in mind — clear explanations, visuals, and examples help you understand how markets work step-by-step.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Do I need any prior financial knowledge?</div>
+    <div class="faq-answer">
+      No, you don’t. We explain every concept from the ground up — from basic terms to real-world investing strategies.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Will you provide real-time stock data?</div>
+    <div class="faq-answer">
+      The platform includes live or simulated data visuals using trusted APIs, so you can understand market trends in a practical and engaging way.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Can I use this on mobile devices?</div>
+    <div class="faq-answer">
+      Yes! The entire site is fully responsive — it works smoothly on desktops, tablets, and smartphones for easy access anytime.
+    </div>
+  </div>
+</section>
   
 
     <!-- <div class="box-container">
