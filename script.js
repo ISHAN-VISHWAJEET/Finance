@@ -26,13 +26,13 @@
 
 //     observer.observe(typingElement);
 
-const text = document.querySelector('.budget-text');
-    window.addEventListener('scroll', () => {
-      const rect = text.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        text.classList.add('visible');
-      }
-    });
+const budgetText = document.querySelector('.budgeting-text');
+window.addEventListener('scroll', () => {
+  const rect = budgetText.getBoundingClientRect();
+  if (rect.top < window.innerHeight - 100) {
+    budgetText.classList.add('visible');
+  }
+});
 
 const textual = document.querySelector('.monetary-text');
     window.addEventListener('scroll', () => {
@@ -41,6 +41,25 @@ const textual = document.querySelector('.monetary-text');
         textual.classList.add('visible');
       }
     });
+
+const insuranceText = document.querySelector('.insurance-text');
+window.addEventListener('scroll', () => {
+  const rect = insuranceText.getBoundingClientRect();
+  if (rect.top < window.innerHeight - 100) {
+    insuranceText.classList.add('visible');
+  }
+});
+
+
+const stockText = document.querySelector('.stock-text');
+window.addEventListener('scroll', () => {
+  const rect = stockText.getBoundingClientRect();
+  if (rect.top < window.innerHeight - 100) {
+    stockText.classList.add('visible');
+  }
+});
+
+
  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
