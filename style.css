@@ -37,6 +37,7 @@ h1, h2, h3, h4,h5,h6{
     position:absolute;
     top: 0px;
     z-index: -1;
+    border-bottom-color: rgba(0, 0, 0, 0.8);
 }
 
 /* #bg{
@@ -214,17 +215,17 @@ header{
 }
 
 .circles{
-    width: 90vw;
+    width: 100%;
     display: flex;
     justify-content: center ;
     align-items: center;
-    padding: 80px 160px 0 120px;
+    padding: 80px ;
 }
 
 
 .block{
     margin: 0 20px;
-    /* align-items: center; */
+    align-items: center;
     /* justify-items: center; */
 
 }

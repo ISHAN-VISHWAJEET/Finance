@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About SEBI — How to invest in the Stock Market</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=WDXL+Lubrifont+SC&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#060812;
+      --card:#0f1720;
+      --muted:#98a0b3;
+      --accent:#00d4ff;
+      --accent-2:#66fcf1;
+      --glass: rgba(255,255,255,0.03);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:"Raleway",Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:#e6eef6;background:
+      radial-gradient(1200px 600px at 10% 10%, rgba(0,212,255,0.04), transparent),
+      linear-gradient(180deg,#03050a 0%, var(--bg) 100%); -webkit-font-smoothing:antialiased}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* layout */
+    header{padding:18px 28px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.04)}
+    .logo img{width:100%;height:100%;object-fit:cover;display:block}
+    .site-title{font-weight:700;font-size:18px;letter-spacing:0.2px}
+    nav a{margin-left:14px;color:var(--muted);font-weight:600;font-size:14px}
+
+    /* Hero */
+    .hero{position:relative;min-height:60vh;display:flex;align-items:center;justify-content:center;padding:24px;overflow:hidden}
+    .hero-grid{max-width:1100px;width:100%;display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:30px;border-radius:16px;backdrop-filter: blur(6px);border:1px solid rgba(255,255,255,0.03);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    .hero h1{margin:0;font-size:clamp(24px,4vw,44px);line-height:1.03;color:#fff}
+    .hero p{color:var(--muted);margin-top:10px;font-size:15px}
+    .actions{margin-top:16px;display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);cursor:pointer;background:transparent;color:var(--accent);font-weight:700}
+    .btn.secondary{background:rgba(255,255,255,0.03);color:#fff}
+
+    /* typewriter overlay inside hero */
+    .typewriter{position:relative;margin-top:12px}
+    .typing-text{display:inline-block;font-family:Ubuntu, Inter, system-ui;font-size:clamp(18px,2.8vw,26px);font-weight:700;color:var(--accent-2);white-space:nowrap;overflow:hidden;width:0;animation:typeEffect 5s steps(40,end) forwards}
+    .typing-text::after{content:"";display:inline-block;width:0.12em;height:1em;vertical-align:middle;margin-left:6px;animation:blink 0.7s steps(1) infinite}
+    .typing-text.finished::after{animation:none;opacity:1}
+
+    @keyframes typeEffect{from{width:0} to{width:100%}}
+    @keyframes blink{50%{opacity:0}}
+
+    /* right column images */
+    .media{display:flex;flex-direction:column;gap:12px}
+    .media .img{height:180px;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);transform:translateY(8px);opacity:0;animation:popIn .6s forwards}
+    .media .img:nth-child(1){animation-delay:.12s}
+    .media .img:nth-child(2){animation-delay:.18s}
+    .media .img:nth-child(3){animation-delay:.24s}
+    .media img{width:100%;height:100%;object-fit:cover;display:block}
+
+    @keyframes popIn{to{transform:none;opacity:1}}
+
+    /* main content */
+    main{max-width:1100px;margin:28px auto;padding:0 20px 80px}
+    .grid{display:grid;grid-template-columns:1fr 360px;gap:22px}
+    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+    h2{margin:0 0 10px 0;color:#fff}
+    p.lead{color:var(--muted);line-height:1.55}
+
+    /* vision/mission row */
+    .row{display:flex;gap:12px}
+    .mini{flex:1;padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.02)}
+    .mini h3{margin:0;font-size:16px}
+    .mini p{color:var(--muted);font-size:14px;margin-top:8px}
+
+    /* functions list */
+    .funcs{display:grid;grid-template-columns:repeat(1,1fr);gap:10px;margin-top:12px}
+    .func{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.02);transform:translateY(6px);opacity:0;animation:flyIn .5s forwards}
+    .func svg{flex-shrink:0}
+    .func p{margin:0;color:var(--muted);font-size:14px}
+
+    @keyframes flyIn{to{transform:none;opacity:1}}
+
+    /* timeline */
+    .timeline{margin-top:14px;border-left:2px solid rgba(255,255,255,0.03);padding-left:14px}
+    .event{position:relative;padding:12px 0}
+    .event::before{content:'';position:absolute;left:-10px;top:12px;width:14px;height:14px;background:var(--accent);border-radius:50%;box-shadow:0 0 0 6px rgba(0,212,255,0.06)}
+
+    /* FAQs */
+    .faq{margin-top:14px}
+    .q{background:var(--glass);border-radius:10px;padding:12px;border:1px solid rgba(255,255,255,0.02);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+    .a{display:none;padding:12px 12px 0 12px;color:var(--muted)}
+    .q.open{border-bottom-left-radius:0;border-bottom-right-radius:0}
+    .q .chev{transition:transform .28s ease}
+
+    /* resources */
+    .resources{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+    .pill{padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);color:var(--muted);font-weight:600}
+
+    /* footer */
+    footer{text-align:center;padding:24px;color:var(--muted);font-size:14px;margin-top:28px}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero-grid{grid-template-columns:1fr;gap:16px}
+      .grid{grid-template-columns:1fr}
+      nav{display:none}
+    }
+    .menu-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background-color: rgba(0,212,255,0.04);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5%;
+        z-index: 10;
+        animation: slideDown 1s ease-out;
+        backdrop-filter: blur(10px);
+      }
+
+      .logo {
+        padding-left: 0
+      }
+
+      .logo span {
+        color: var(--color-primary);
+      }
+
+      .menu-bar ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu-bar ul li {
+        padding: 10px 30px;
+        position: relative;
+      }
+
+      .menu-bar ul li a {
+        font-size: 18px;
+        color: var(--color-white);
+        transition: all 0.3s;
+      }
+
+      .menu-bar ul li a:hover {
+        color: var(--color-primary);
+      }
+
+      /* === Dropdown Menu === */
+      .dropdown-menu {
+        display: none;
+      }
+
+      .menu-bar ul li:hover .dropdown-menu {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background-color: rgba(6, 46, 54, 0.719);
+        border-radius: 20px;
+      }
+
+      .menu-bar ul li:hover .dropdown-menu ul {
+        display: block;
+        margin: 10px;
+      }
+
+      .menu-bar ul li:hover .dropdown-menu ul li {
+        width: 150px;
+        padding: 10px;
+      }
+
+      .dropdown-menu-1 {
+        display: none;
+      }
+
+      .dropdown-menu ul li:hover .dropdown-menu-1 {
+        display: block;
+        position: absolute;
+        left: 150px;
+        top: 0;
+        background-color: var(--color-black);
+      }
+
+      /* === Hero Section Placeholder === */
+
+      /* === Animation === */
+      @keyframes slideDown {
+        0% {
+          transform: translateY(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+  </style>
+</head>
+<body>
+  <div class="menu-bar" >
+        <img src="generated-image.png" class="logo" alt="" style="width: 9%;height: 110%;margin-left: 50px;">
+        <ul>
+        <li><a href="index.html" style="font-family: 'Raleway';">Home</a></li>
+        <!-- <li><a href="#" style="font-family: 'Raleway';">About</a></li> -->
+        <li>
+          <a href="#" style="font-family: 'Raleway';">Resources ▾</a>
+          <div class="dropdown-menu">
+            <ul>
+              <li><a href="index.html#budgeting" style="font-family: 'Raleway';">Budgeting</a></li>
+              <li><a href="index.html#monetary" style="font-family: 'Raleway';">Monetary</a></li>
+              <li>
+                <a href="index.html#insrance" style="font-family: 'Raleway';">Insurance</a>
+                <!-- <div class="dropdown-menu-1">
+                  <ul>
+                    <li><a href="#">Team-1</a></li>
+                    <li><a href="#">Team-2</a></li>
+                    <li><a href="#">Team-3</a></li>
+                    <li><a href="#">Team-4</a></li>
+                  </ul>
+                </div> -->
+              </li>
+              <li><a href="index.html#FAQ" style="font-family: 'Raleway';">FAQs</a></li>
+            </ul>
+          </div>
+        </li>
+        <li><a href="index.html#about" style="font-family: 'Raleway';">About Us</a></li>
+      </ul>
+    </div>
+
+  <section class="hero" role="banner" aria-label="SEBI introduction" style="margin-top: 80px;">
+    <div class="hero-grid">
+      <div class="hero-card" aria-hidden="false">
+        <h1>How to invest in the Stock Market — SEBI & Investor Safety</h1>
+        <p class="lead">The Securities and Exchange Board of India (SEBI) is the regulatory body that protects investors and keeps India’s securities markets fair and transparent. Below is a concise guide to SEBI’s role, and how it helps you invest safely.</p>
+
+        <div class="typewriter" aria-hidden="true">
+          <div class="typing-text" id="type">Explore India's Stock Market — Regulated by SEBI</div>
+        </div>
+
+        <div class="actions" style="margin-top:22px">
+          <button class="btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Learn about SEBI</button>
+          <a class="btn secondary" href="https://www.sebi.gov.in" target="_blank" rel="noopener noreferrer">Official SEBI site</a>
+        </div>
+
+      </div>
+
+      <aside class="media" aria-hidden="false">
+        <div class="img"><img src="market charts.avif" alt="Market chart"></div>
+        <div class="img"><img src="hand with graph.jpeg" alt="Touch graph"></div>
+        <div class="img"><img src="stock cahrt.jpg" alt="Stocks list"></div>
+      </aside>
+    </div>
+  </section>
+
+  <main>
+    <!-- About -->
+    <section id="about" class="card" aria-labelledby="about-title">
+      <h2 id="about-title">Introduction</h2>
+      <p class="lead">
+        The Securities and Exchange Board of India (SEBI) was first created in 1988 and
+        became a statutory body under the SEBI Act, 1992. Headquartered in Mumbai, SEBI's
+        mandate is to protect investor interests, develop the securities market, and enforce
+        regulations that ensure transparency and fairness.
+      </p>
+
+      <div class="row" style="margin-top:14px">
+        <div class="mini">
+          <h3>Vision</h3>
+          <p>To create a secure, transparent, and efficient securities market that inspires investor confidence and supports economic growth.</p>
+        </div>
+        <div class="mini">
+          <h3>Mission</h3>
+          <p>To safeguard investor interests, facilitate market development, and enforce rules that uphold integrity and accountability.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="grid" style="margin-top:16px">
+      <!-- left column: functions & more -->
+      <section class="card" id="functions" aria-labelledby="functions-title">
+        <h2 id="functions-title">What We Do — SEBI's Major Roles</h2>
+        <div class="funcs" role="list">
+          <div class="func" style="animation-delay:.05s">
+            <!-- regulatory -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" stroke="url(#g)" stroke-width="1.2"></circle>
+              <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#00d4ff"/><stop offset="1" stop-color="#66fcf1"/></linearGradient></defs>
+            </svg>
+            <div>
+              <strong style="display:block;color:#fff">Regulatory Functions</strong>
+              <p>Supervises exchanges, depositories and market intermediaries (brokers, underwriters). Frames rules to prevent insider trading and market manipulation.</p>
+            </div>
+          </div>
+
+          <div class="func" style="animation-delay:.10s">
+            <!-- developmental -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="3" stroke="url(#g2)" stroke-width="1.2"></rect>
+              <defs><linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#00d4ff"/><stop offset="1" stop-color="#66fcf1"/></linearGradient></defs>
+            </svg>
+            <div>
+              <strong style="display:block;color:#fff">Developmental Functions</strong>
+              <p>Promotes investor education, adoption of modern trading systems, and simplifies procedures to encourage investment.</p>
+            </div>
+          </div>
+
+          <div class="func" style="animation-delay:.15s">
+            <!-- protective -->
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2L3 6v6c0 5 3.7 9.7 9 10 5.3-.3 9-5 9-10V6l-9-4z" stroke="url(#g3)" stroke-width="1.2" fill="none"></path>
+              <defs><linearGradient id="g3" x1="0" x2="1"><stop offset="0" stop-color="#00d4ff"/><stop offset="1" stop-color="#66fcf1"/></linearGradient></defs>
+            </svg>
+            <div>
+              <strong style="display:block;color:#fff">Protective Functions</strong>
+              <p>Investigates unfair trade practices, runs the SCORES grievance system, and enforces disclosure norms to maintain market integrity.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline" id="timeline" aria-labelledby="timeline-title">
+          <h3 id="timeline-title" style="margin-top:14px;color:#fff">A short timeline</h3>
+          <div class="event">
+            <strong>1988</strong> — SEBI set up as a non-statutory body.
+          </div>
+          <div class="event">
+            <strong>1992</strong> — SEBI Act enacted; SEBI becomes a statutory regulator.
+          </div>
+          <div class="event">
+            <strong>2000s — present</strong> — Major reforms: electronic trading, improved disclosure, investor education drives.
+          </div>
+        </div>
+
+        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:14px 0">
+
+        <h3>Practical investor-facing actions by SEBI</h3>
+        <ul style="color:var(--muted);margin-top:8px;line-height:1.6">
+          <li>Enforces KYC & transparency for brokers and funds.</li>
+          <li>Runs SCORES for investor grievances — you can file complaints and track them online.</li>
+          <li>Publishes circulars and investor advisories (subscribe to stay informed).</li>
+        </ul>
+      </section>
+
+      <!-- right column: resources, faq -->
+      <aside>
+        <div class="card">
+          <h3>Quick resources</h3>
+          <p class="lead" style="margin-top:8px">Official resources and tools to help investors:</p>
+          <div class="resources" role="list">
+            <a class="pill" href="https://www.sebi.gov.in" target="_blank" rel="noopener">SEBI — Official</a>
+            <a class="pill" href="https://www.nseindia.com" target="_blank" rel="noopener">NSE</a>
+            <a class="pill" href="https://www.bseindia.com" target="_blank" rel="noopener">BSE</a>
+            <a class="pill" href="#" onclick="alert('Open a paper trading account with your broker to practice.')">Paper Trading</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px">
+          <h3 id="faq">Frequently Asked Questions</h3>
+
+          <div class="faq">
+            <div class="q" data-target="a1">
+              <div>What is SCORES?</div>
+              <div class="chev">▸</div>
+            </div>
+            <div id="a1" class="a">
+              <p>SCORES is SEBI's online grievance redressal system where investors can file and track complaints against intermediaries or listed companies.</p>
+            </div>
+
+            <div class="q" data-target="a2" style="margin-top:8px">
+              <div>How does SEBI protect retail investors?</div>
+              <div class="chev">▸</div>
+            </div>
+            <div id="a2" class="a">
+              <p>Through regulation of intermediaries, enforcement actions, investor education campaigns, and transparent disclosure norms for listed entities.</p>
+            </div>
+
+            <div class="q" data-target="a3" style="margin-top:8px">
+              <div>Where can I learn more about rules?</div>
+              <div class="chev">▸</div>
+            </div>
+            <div id="a3" class="a">
+              <p>Visit the <a href="https://www.sebi.gov.in" target="_blank" rel="noopener">SEBI website</a> for circulars, investor guides, and latest regulatory updates.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:12px;text-align:center">
+          <h3>Start Smart</h3>
+          <p class="lead">Before investing: set goals, check your risk appetite, diversify, and practice with paper trading.</p>
+          <button class="btn" onclick="window.open('https://www.sebi.gov.in', '_blank')">Visit SEBI</button>
+        </div>
+      </aside>
+    </div>
+
+    <section class="card" style="margin-top:18px">
+      <h2>More about SEBI's protective tools</h2>
+      <p class="lead">SEBI actively investigates market abuse, issues penalties, and ensures companies make timely disclosures. If you face unfair practices, lodge a complaint on SCORES and keep your KYC and transaction proofs handy.</p>
+      <div style="display:flex;gap:12px;margin-top:12px;flex-wrap:wrap">
+        <div class="pill">Investor Education</div>
+        <div class="pill">Grievance Redressal (SCORES)</div>
+        <div class="pill">Market Surveillance</div>
+        <div class="pill">Insider Trading Prevention</div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    // Typewriter: stop blinking once typing finishes
+    const typeEl = document.getElementById('type');
+    if (typeEl) {
+      typeEl.addEventListener('animationend', () => {
+        typeEl.classList.add('finished');
+      });
+    }
+
+    // FAQ accordion behaviour
+    document.querySelectorAll('.q').forEach(q=>{
+      q.addEventListener('click', ()=>{
+        const targetId = q.getAttribute('data-target');
+        const ans = document.getElementById(targetId);
+        const open = q.classList.contains('open');
+        // close all
+        document.querySelectorAll('.q').forEach(el=>{el.classList.remove('open'); el.querySelector('.chev').style.transform='rotate(0deg)'});
+        document.querySelectorAll('.a').forEach(el=>el.style.display='none');
+        if (!open) {
+          q.classList.add('open');
+          q.querySelector('.chev').style.transform='rotate(90deg)';
+          ans.style.display='block';
+        }
+      });
+    });
+
+    // animate functions list into view
+    const funcs = document.querySelectorAll('.func');
+    const obs = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, {threshold:0.15});
+    funcs.forEach(f=>obs.observe(f));
+
+    // small accessibility: allow keyboard toggle for FAQs
+    document.querySelectorAll('.q').forEach(q=>{
+      q.setAttribute('tabindex', '0');
+      q.addEventListener('keydown', e=>{
+        if (e.key === 'Enter' || e.key === ' ') q.click();
+      });
+    });
+  </script>
+</body>
+</html>
